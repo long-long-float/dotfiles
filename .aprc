@@ -1,0 +1,8 @@
+AwesomePrint.defaults = {
+  color: {
+    string: :greenish,
+    array: :red,
+    hash: :red,
+    class: :blue
+  }
+}

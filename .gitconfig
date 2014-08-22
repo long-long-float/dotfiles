@@ -1,0 +1,9 @@
+[user]
+	name = long-long-float
+	email = niinikazuki@yahoo.co.jp
+[core]
+	editor = vim
+[push]
+	default = simple
+[color]
+	ui = auto
