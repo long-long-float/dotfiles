@@ -15,9 +15,9 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-
 " plugins
 NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'sickill/vim-monokai'
 
 call neobundle#end()
 
@@ -49,7 +49,7 @@ au BufNewFile,BufRead *.md setf markdown
 
 "
 " Theme
-" https://github.com/sickill/vim-monokai
+"
 syntax enable
 colorscheme monokai
 

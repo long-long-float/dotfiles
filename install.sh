@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DOT_FILES=(
   .aprc .pryrc .vimrc .gitconfig
@@ -6,12 +6,19 @@ DOT_FILES=(
   .config/fish/config.fish .config/fish/functions/fish_prompt.fish
   )
 
+mkdir -p $HOME/.config/fish/functions
+
 for file in ${DOT_FILES[@]}
 do
   if [ -e $HOME/$file ]; then
-    echo "existing $file"
+    echo "existing $file. override?[y/n] : "
+    read yn
+    if [ "$yn" = "y" ]; then
+      ln -sf `pwd`/$file $HOME/$file
+      echo "linked $file"
+    fi
   else
-    ln -s $HOME/git/dotfiles/$file $HOME/$file
+    ln -s `pwd`/$file $HOME/$file
     echo "linked $file"
   fi
 done

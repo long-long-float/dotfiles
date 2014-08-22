@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 # install fish shell
 sudo apt-add-repository -y ppa:fish-shell/release-2
 sudo apt-get update
 sudo apt-get -y install fish
+
+chsh -s /usr/bin/fish
 
 echo "installed fish shell"
 
