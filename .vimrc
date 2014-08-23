@@ -41,6 +41,7 @@ set expandtab
 set smarttab
 
 au BufNewFile,BufRead *.md setf markdown
+au BufWritePre * :%s/\s\+%//e
 
 "nnoremap j gj
 "nnoremap k gk
