@@ -21,21 +21,15 @@ set right_segment_separator \uE0B0
 # ===========================
 
 set -g __fish_git_prompt_showdirtystate 'yes'
-set -g __fish_git_prompt_char_dirtystate '±'
-set -g __fish_git_prompt_char_cleanstate ''
+set -g __fish_git_prompt_char_dirtystate '⚡'
+set -g __fish_git_prompt_char_cleanstate '♻'
 
 function parse_git_dirty
   set -l submodule_syntax
   set submodule_syntax "--ignore-submodules=dirty"
   set git_dirty (command git status -s $submodule_syntax  2> /dev/null)
-  if [ -n "$git_dirty" ]
-    if [ $__fish_git_prompt_showdirtystate = "yes" ]
-      echo -n "$__fish_git_prompt_char_dirtystate"
-    end
-  else
-    if [ $__fish_git_prompt_showdirtystate = "yes" ]
-      echo -n "$__fish_git_prompt_char_cleanstate"
-    end
+  if [ $__fish_git_prompt_showdirtystate = "yes" ]
+    echo -n "$git_dirty"
   end
 end
 
@@ -115,9 +109,9 @@ function prompt_git -d "Display the actual git state"
     set branch_symbol \uE0A0
     set -l branch (echo $ref | sed  "s-refs/heads/-$branch_symbol -")
     if [ "$dirty" != "" ]
-      prompt_segment red white "$branch $dirty"
+      prompt_segment yellow black "$branch $__fish_git_prompt_char_dirtystate"
     else
-      prompt_segment green white "$branch $dirty"
+      prompt_segment green white "$branch $__fish_git_prompt_char_cleanstate"
     end
   end
 end
