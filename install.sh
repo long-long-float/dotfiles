@@ -1,7 +1,9 @@
 #!/bin/bash
 
 DOT_FILES=(
-  .aprc .pryrc .vimrc .gitconfig
+  # ruby
+  .aprc .pryrc .gemrc
+  .vimrc .gitconfig
   #fish
   .config/fish/config.fish .config/fish/functions/fish_prompt.fish
   )

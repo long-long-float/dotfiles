@@ -1,0 +1,5 @@
+# old options
+gem: --no-ri --no-rdoc
+# current options
+install: --no-document
+update:  --no-document
