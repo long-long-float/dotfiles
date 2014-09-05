@@ -41,6 +41,6 @@ alias be="bundle exec"
 alias ccat="pygmentize -g"
 
 # key repeat configure
-if [ $DISPLAY  ]
-  xset r rate 230 60
+if [ "$DISPLAY"  ]
+  xset r rate 400 60
 end
