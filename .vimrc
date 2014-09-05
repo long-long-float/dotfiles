@@ -19,6 +19,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'sickill/vim-monokai'
 NeoBundle 'tpope/vim-endwise'
+NeoBundle 'airblade/vim-gitgutter'
 
 call neobundle#end()
 
