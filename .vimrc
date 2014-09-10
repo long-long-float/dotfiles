@@ -20,6 +20,8 @@ NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'sickill/vim-monokai'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 
@@ -41,14 +43,21 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set smarttab
+set nowrap
 
+au BufRead, BufNewFile, BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead *.md setf markdown
+
+" remove tail spece before saving
 au BufWritePre * :%s/\s\+$//e
 
-"nnoremap j gj
-"nnoremap k gk
-"nnoremap <Down> gj
-"nnoremap <Up> gk
+au FileType c    setl ts=8 sw=4 noexpandtab
+au FileType ruby setl nowrap tabstop=8 tw=0 sw=2 expandtab
+au FileType objc setl ts=4 sw=4 expandtab
+au FileType coffee setl sw=2 sts=2 ts=2 expandtab
+
+" for coffee script
+autocmd BufWritePost *.coffee silent CoffeeMake! -cb | cwindow | redraw!
 
 "
 " Theme
