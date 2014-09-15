@@ -34,6 +34,8 @@ NeoBundleCheck
 "
 set nowritebackup
 set nobackup
+set swapfile
+set directory=/tmp
 
 set number
 set showmatch matchtime=1
