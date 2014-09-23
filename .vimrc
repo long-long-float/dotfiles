@@ -21,7 +21,6 @@ NeoBundle 'sickill/vim-monokai'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 
