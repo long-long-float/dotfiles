@@ -21,12 +21,26 @@ NeoBundle 'sickill/vim-monokai'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+NeoBundle 'sudar/vim-arduino-syntax'
+NeoBundle 'derekwyatt/vim-scala'
 
 call neobundle#end()
 
 filetype plugin indent on
 
 NeoBundleCheck
+
+"
+" Powerline
+"
+set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
 
 "
 " editor settings
@@ -67,9 +81,6 @@ autocmd QuickFixCmdPost * nested cwindow | redraw!
 syntax enable
 colorscheme monokai
 
-"
-" Powerline
-"
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
