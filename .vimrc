@@ -62,6 +62,7 @@ set nowrap
 
 au BufRead, BufNewFile, BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead *.md setf markdown
+au BufNewFile,BufRead *.sjs setf javascript
 
 " remove tail spece before saving
 au BufWritePre * :%s/\s\+$//e
