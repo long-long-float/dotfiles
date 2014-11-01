@@ -118,7 +118,7 @@ end
 
 function prompt_status -d "the symbols for a non zero exit status, root and background jobs"
   if [ $RETVAL -ne 0 ]
-    prompt_segment white red "✘"
+    prompt_segment white red $RETVAL
   end
 
   # if superuser (uid == 0)
