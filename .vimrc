@@ -24,6 +24,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundle 'sudar/vim-arduino-syntax'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'vim-scripts/st.vim'
 
 call neobundle#end()
 
@@ -63,6 +64,7 @@ set nowrap
 au BufRead, BufNewFile, BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead *.md setf markdown
 au BufNewFile,BufRead *.sjs setf javascript
+au BufNewFile,BufRead *.som setf st
 
 " remove tail spece before saving
 au BufWritePre * :%s/\s\+$//e
