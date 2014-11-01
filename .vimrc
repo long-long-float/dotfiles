@@ -64,6 +64,12 @@ set expandtab
 set smarttab
 set nowrap
 
+let OSTYPE = system('uname')
+
+if OSTYPE == "Darwin\n"
+  noremap ; :
+endif
+
 au BufRead, BufNewFile, BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead *.md setf markdown
 au BufNewFile,BufRead *.sjs setf javascript
