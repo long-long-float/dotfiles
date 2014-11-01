@@ -22,7 +22,7 @@ set right_segment_separator \uE0B0
 
 set -g __fish_git_prompt_showdirtystate 'yes'
 set -g __fish_git_prompt_char_dirtystate '⚡'
-set -g __fish_git_prompt_char_cleanstate '♻'
+set -g __fish_git_prompt_char_cleanstate '♺'
 
 function parse_git_dirty
   set -l submodule_syntax
