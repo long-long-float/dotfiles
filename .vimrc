@@ -26,6 +26,8 @@ NeoBundle 'sudar/vim-arduino-syntax'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'vim-scripts/st.vim'
 NeoBundle 'sudo.vim'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'plasticboy/vim-markdown'
 
 call neobundle#end()
 
@@ -78,6 +80,9 @@ au FileType coffee setl sw=2 sts=2 ts=2 expandtab
 " for coffee script
 autocmd BufWritePost *.coffee silent make! -cb
 autocmd QuickFixCmdPost * nested cwindow | redraw!
+
+" makrdown
+let g:vim_markdown_folding_disabled=1
 
 "
 " Theme
