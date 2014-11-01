@@ -25,6 +25,7 @@ NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundle 'sudar/vim-arduino-syntax'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'vim-scripts/st.vim'
+NeoBundle 'sudo.vim'
 
 call neobundle#end()
 
