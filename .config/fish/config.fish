@@ -20,6 +20,13 @@ set fish_plugins git rails
 #  ~/powerline-shell/powerline-shell.py $status --shell bare ^/dev/null
 #end
 
+if [ (uname) = "Linux" ]
+  # For linuxbrew
+  set PATH     $HOME/.linuxbrew/bin        $PATH
+  set MANPATH  $HOME/.linuxbrew/share/man  $MANPATH
+  set INFOPATH $HOME/.linuxbrew/share/info $INFOPATH
+end
+
 set PATH $HOME/bin $PATH
 set PATH $HOME/dex2jar $PATH
 set PATH $HOME/.local/bin $PATH
