@@ -28,6 +28,7 @@ NeoBundle 'vim-scripts/st.vim'
 NeoBundle 'sudo.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'tpope/vim-fugitive'
 
 call neobundle#end()
 
