@@ -83,10 +83,6 @@ au FileType ruby setl nowrap tabstop=8 tw=0 sw=2 expandtab
 au FileType objc setl ts=4 sw=4 expandtab
 au FileType coffee setl sw=2 sts=2 ts=2 expandtab
 
-" for coffee script
-autocmd BufWritePost *.coffee silent make! -cb
-autocmd QuickFixCmdPost * nested cwindow | redraw!
-
 " makrdown
 let g:vim_markdown_folding_disabled=1
 
