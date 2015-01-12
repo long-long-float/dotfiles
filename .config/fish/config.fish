@@ -46,6 +46,7 @@ set PATH $HOME/pebble-dev/PebbleSDK-2.0.2/bin $PATH
 # aliases
 alias be="bundle exec"
 alias ccat="pygmentize -g"
+alias git="hub"
 
 # key repeat configure
 if [ "$DISPLAY"  ]
