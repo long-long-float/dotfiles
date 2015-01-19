@@ -29,6 +29,7 @@ NeoBundle 'sudo.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'Align'
 
 call neobundle#end()
 
