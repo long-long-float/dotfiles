@@ -25,6 +25,7 @@ if [ (uname) = "Linux" ]
   set PATH     $HOME/.linuxbrew/bin        $PATH
   set MANPATH  $HOME/.linuxbrew/share/man  $MANPATH
   set INFOPATH $HOME/.linuxbrew/share/info $INFOPATH
+  set LD_LIBRARY_PATH $HOME/.linuxbrew/lib $LD_LIBRARY_PATH
 end
 
 set PATH $HOME/bin $PATH
