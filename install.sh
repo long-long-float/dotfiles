@@ -3,7 +3,7 @@
 DOT_FILES=(
   # ruby
   .aprc .pryrc .gemrc
-  .vimrc
+  .vimrc .gvimrc
   #fish
   .config/fish/config.fish .config/fish/functions/fish_prompt.fish
   )
