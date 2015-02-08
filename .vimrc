@@ -17,6 +17,7 @@ call neobundle#end()
 
 " plugins
 NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'sickill/vim-monokai'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'airblade/vim-gitgutter'
@@ -95,7 +96,7 @@ let g:vim_markdown_folding_disabled=1
 " Theme
 "
 syntax enable
-colorscheme monokai
+colorscheme hybrid
 
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2
