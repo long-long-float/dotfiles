@@ -66,6 +66,9 @@ set expandtab
 set smarttab
 set nowrap
 
+set hlsearch
+set incsearch
+
 let OSTYPE = system('uname')
 
 if OSTYPE == "Darwin\n"
