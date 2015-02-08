@@ -48,6 +48,8 @@ set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set laststatus=2
 
 "
 " editor settings
@@ -71,23 +73,22 @@ set hlsearch
 set incsearch
 
 let OSTYPE = system('uname')
-
 if OSTYPE == "Darwin\n"
   noremap ; :
 endif
 
-au BufRead, BufNewFile, BufReadPre *.coffee setf coffee
-au BufNewFile,BufRead *.md setf markdown
-au BufNewFile,BufRead *.sjs setf javascript
-au BufNewFile,BufRead *.som setf st
+au BufNewFile,BufRead,BufReadPre *.coffee setf coffee
+au BufNewFile,BufRead            *.md     setf markdown
+au BufNewFile,BufRead            *.sjs    setf javascript
+au BufNewFile,BufRead            *.som    setf st
 
 " remove tail spece before saving
 au BufWritePre * :%s/\s\+$//e
 
-au FileType c    setl ts=8 sw=4 noexpandtab
-au FileType ruby setl nowrap tabstop=8 tw=0 sw=2 expandtab
-au FileType objc setl ts=4 sw=4 expandtab
-au FileType coffee setl sw=2 sts=2 ts=2 expandtab
+au FileType c      setl ts=8 sw=4 noexpandtab
+au FileType ruby   setl tw=0 sw=2 tabstop=8 nowrap expandtab
+au FileType objc   setl ts=4 sw=4 expandtab
+au FileType coffee setl ts=2 sw=2 sts=2  expandtab
 
 " makrdown
 let g:vim_markdown_folding_disabled=1
@@ -97,7 +98,3 @@ let g:vim_markdown_folding_disabled=1
 "
 syntax enable
 colorscheme hybrid
-
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-set laststatus=2
-set t_Co=256
