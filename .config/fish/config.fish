@@ -54,3 +54,8 @@ alias be="bundle exec"
 alias ccat="pygmentize -g"
 alias git="hub"
 
+# aliases for git
+git config --global alias.s status
+git config --global alias.c commit
+git config --global alias.a add
+git config --global alias.d diff
