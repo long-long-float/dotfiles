@@ -93,6 +93,7 @@ au FileType coffee setl ts=2 sw=2 sts=2  expandtab
 
 " auto completion for html tag
 au FileType html,eruby inoremap <silent> <buffer> </ </<C-p>>
+au FileType eruby      inoremap <silent> <% <%<space><space>%><left><left><left>
 
 " makrdown
 let g:vim_markdown_folding_disabled=1
