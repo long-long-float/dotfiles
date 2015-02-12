@@ -26,6 +26,11 @@ if [ (uname) = "Linux" ]
   set MANPATH  $HOME/.linuxbrew/share/man  $MANPATH
   set INFOPATH $HOME/.linuxbrew/share/info $INFOPATH
   set -x LD_LIBRARY_PATH $HOME/.linuxbrew/lib $LD_LIBRARY_PATH
+
+  # key repeat configure
+  if [ "$DISPLAY"  ]
+    xset r rate 400 60
+  end
 end
 
 set PATH $HOME/bin $PATH
@@ -49,7 +54,3 @@ alias be="bundle exec"
 alias ccat="pygmentize -g"
 alias git="hub"
 
-# key repeat configure
-if [ "$DISPLAY"  ]
-  xset r rate 400 60
-end
