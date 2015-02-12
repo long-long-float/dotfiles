@@ -20,7 +20,8 @@ set fish_plugins git rails
 #  ~/powerline-shell/powerline-shell.py $status --shell bare ^/dev/null
 #end
 
-if [ (uname) = "Linux" ]
+set os (uname)
+if [ $os = "Linux" ]
   # For linuxbrew
   set PATH     $HOME/.linuxbrew/bin        $PATH
   set MANPATH  $HOME/.linuxbrew/share/man  $MANPATH
@@ -31,6 +32,8 @@ if [ (uname) = "Linux" ]
   if [ "$DISPLAY"  ]
     xset r rate 400 60
   end
+else if [ $os = "Darwin" ]
+  set PATH /usr/local/bin $PATH
 end
 
 set PATH $HOME/bin $PATH
