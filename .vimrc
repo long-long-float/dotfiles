@@ -31,6 +31,7 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Align'
+NeoBundle 'vim-rails'
 
 call neobundle#end()
 
