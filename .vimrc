@@ -91,6 +91,9 @@ au FileType ruby   setl tw=0 sw=2 tabstop=8 nowrap expandtab
 au FileType objc   setl ts=4 sw=4 expandtab
 au FileType coffee setl ts=2 sw=2 sts=2  expandtab
 
+" auto completion for html tag
+au FileType html,eruby inoremap <silent> <buffer> </ </<C-p>>
+
 " makrdown
 let g:vim_markdown_folding_disabled=1
 
