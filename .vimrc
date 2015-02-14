@@ -33,6 +33,15 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Align'
 NeoBundle 'vim-rails'
 NeoBundle 'stevemadere/ruby-matchit'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'Shougo/vimproc', {
+    \ 'build' : {
+    \     'windows' : 'make -f make_mingw32.mak',
+    \     'cygwin' : 'make -f make_cygwin.mak',
+    \     'mac' : 'make -f make_mac.mak',
+    \     'unix' : 'make -f make_unix.mak',
+    \    },
+    \ }
 
 call neobundle#end()
 
@@ -98,6 +107,13 @@ au FileType eruby      inoremap <silent> <% <%<space><space>%><left><left><left>
 
 " makrdown
 let g:vim_markdown_folding_disabled=1
+
+let g:quickrun_config = {
+  \ "_": {
+  \   "runner": "vimproc",
+  \   "runner/vimproc/updatetime": 60
+  \ },
+  \}
 
 "
 " Theme
