@@ -32,7 +32,7 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Align'
 NeoBundle 'vim-rails'
-NeoBundle 'ruby-matchit'
+NeoBundle 'stevemadere/ruby-matchit'
 
 call neobundle#end()
 
