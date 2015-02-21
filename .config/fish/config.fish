@@ -33,7 +33,11 @@ if [ $os = "Linux" ]
     xset r rate 400 60
   end
 else if [ $os = "Darwin" ]
+  # for homebrew
   set PATH /usr/local/bin $PATH
+
+  set PATH (brew --prefix coreutils)/libexec/gnubin $PATH
+  set MANPATH (brew --prefix coreutils)/libexec/gnuman $MANPATH
 end
 
 set PATH $HOME/bin $PATH
@@ -52,8 +56,11 @@ set PATH $HOME/.nodebrew/current/bin $NODE_PATH $PATH
 # For PebbleSDK
 set PATH $HOME/pebble-dev/PebbleSDK-2.0.2/bin $PATH
 
+if type -P dircolors >/dev/null
+  eval (dircolors -c ~/.dir_colors | sed 's/>&\/dev\/null$//')
+end
+
 # aliases
 alias be="bundle exec"
 alias ccat="pygmentize -g"
 alias git="hub"
-
