@@ -31,7 +31,7 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Align'
-NeoBundle 'vim-rails'
+NeoBundle 'tpope/vim-rails'
 NeoBundle 'stevemadere/ruby-matchit'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Shougo/vimproc', {
