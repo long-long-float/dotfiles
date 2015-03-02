@@ -19,6 +19,7 @@ call neobundle#end()
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'sickill/vim-monokai'
+NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -119,4 +120,5 @@ let g:quickrun_config = {
 " Theme
 "
 syntax enable
-colorscheme hybrid
+colorscheme elflord
+highlight Normal ctermbg=none
