@@ -89,6 +89,10 @@ if OSTYPE == "Darwin\n"
   noremap ; :
 endif
 
+" key maps
+" http://qiita.com/ykyk1218/items/8f5471c5e90cc83fd407
+noremap pp "0p
+
 au BufNewFile,BufRead,BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead            *.md     setf markdown
 au BufNewFile,BufRead            *.sjs    setf javascript
