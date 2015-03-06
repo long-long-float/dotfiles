@@ -74,7 +74,7 @@ set directory=/tmp
 set number
 set showmatch matchtime=1
 
-set autoindent
+set cindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -105,6 +105,8 @@ au FileType coffee setl ts=2 sw=2 sts=2  expandtab
 " auto completion for html tag
 au FileType html,eruby inoremap <silent> <buffer> </ </<C-p>>
 au FileType eruby      inoremap <silent> <% <%<space><space>%><left><left><left>
+
+au FileType cpp inoremap <silent> <buffer> {<return> {}<left><cr><esc><S-o>
 
 " makrdown
 let g:vim_markdown_folding_disabled=1
