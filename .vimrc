@@ -44,6 +44,9 @@ NeoBundle 'Shougo/vimproc', {
     \    },
     \ }
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'Yggdroot/indentLine'
+
+let g:indentLine_color_term = 244
 
 call neobundle#end()
 
