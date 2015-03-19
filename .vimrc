@@ -43,6 +43,7 @@ NeoBundle 'Shougo/vimproc', {
     \     'unix' : 'make -f make_unix.mak',
     \    },
     \ }
+NeoBundle 'tpope/vim-surround'
 
 call neobundle#end()
 
