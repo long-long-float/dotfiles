@@ -64,3 +64,4 @@ end
 alias be="bundle exec"
 alias ccat="pygmentize -g"
 alias git="hub"
+alias ccp="xclip -i -selection clipboard"
