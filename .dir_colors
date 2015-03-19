@@ -104,6 +104,10 @@ EXEC 01;32
 # executable bit actually set.
 .sh 01;32
 .rb 01;31
+.cpp 01;33
+.c   01;33
+.java 01;43
+.py   01;34
 #.csh 01;32
  # archives or compressed (bright red)
 .tar 01;31
