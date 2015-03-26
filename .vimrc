@@ -155,9 +155,6 @@ let g:quickrun_config = {
   \ },
   \}
 
-"
-" Theme
-"
-syntax enable
-colorscheme elflord
-highlight Normal ctermbg=none
+" load splited vimrc
+set rtp+=$HOME/.vim
+runtime! conf/*.vim

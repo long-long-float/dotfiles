@@ -1,0 +1,5 @@
+" rename to theme.vim
+
+" Theme
+syntax enable
+colorscheme

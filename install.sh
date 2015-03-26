@@ -3,7 +3,9 @@
 DOT_FILES=(
   # ruby
   .aprc .pryrc .gemrc
-  .vimrc .gvimrc
+  # vim
+  .vimrc .gvimrc .vim/conf/theme.vim
+  .tmux.conf
   .gitconfig
   #fish
   .config/fish/config.fish .config/fish/functions/fish_prompt.fish
