@@ -88,6 +88,8 @@ set nowrap
 set hlsearch
 set incsearch
 
+set mouse=a
+
 let OSTYPE = system('uname')
 if OSTYPE == "Darwin\n"
   noremap ; :
