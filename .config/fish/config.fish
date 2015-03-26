@@ -20,6 +20,9 @@ set fish_plugins git rails
 #  ~/powerline-shell/powerline-shell.py $status --shell bare ^/dev/null
 #end
 
+# 自分でビルドしたやつ
+set PATH $HOME/local/bin $PATH
+
 set os (uname)
 if [ $os = "Linux" ]
   # For linuxbrew
