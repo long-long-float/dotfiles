@@ -45,6 +45,12 @@ NeoBundle 'Shougo/vimproc', {
     \ }
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'marcus/rsense'
+NeoBundle 'supermomonga/neocomplete-rsense.vim'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'yuku-t/vim-ref-ri'
+NeoBundle 'szw/vim-tags'
 
 let g:indentLine_color_term = 244
 
@@ -66,6 +72,23 @@ set term=xterm-256color
 set termencoding=utf-8
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2
+
+"
+" Rsense
+"
+" let g:rsenseHome = '/usr/local/lib/rsense-0.3'
+let g:rsenseUseOmniFunc = 1
+
+"
+" neocomplete.vim
+"
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 
 "
 " editor settings
