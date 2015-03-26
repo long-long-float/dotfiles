@@ -90,6 +90,8 @@ set incsearch
 
 set mouse=a
 
+set backspace=start,eol,indent
+
 let OSTYPE = system('uname')
 if OSTYPE == "Darwin\n"
   noremap ; :
