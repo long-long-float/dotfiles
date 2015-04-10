@@ -7,6 +7,7 @@ DOT_FILES=(
   .vimrc .gvimrc .vim/conf/theme.vim
   .tmux.conf
   .gitconfig
+  .dir_colors
   #fish
   .config/fish/config.fish .config/fish/functions/fish_prompt.fish
   )
