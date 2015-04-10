@@ -51,6 +51,7 @@ NeoBundle 'supermomonga/neocomplete-rsense.vim'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'yuku-t/vim-ref-ri'
 NeoBundle 'szw/vim-tags'
+NeoBundle 'elzr/vim-json'
 
 let g:indentLine_color_term = 244
 
@@ -89,6 +90,11 @@ if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}
 endif
 let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
+
+"
+" vim-json
+"
+let g:vim_json_syntax_conceal = 0
 
 "
 " editor settings
