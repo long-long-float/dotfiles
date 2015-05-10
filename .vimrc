@@ -52,6 +52,7 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'yuku-t/vim-ref-ri'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'othree/html5.vim'
 
 let g:indentLine_color_term = 244
 
