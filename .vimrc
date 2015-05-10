@@ -146,7 +146,6 @@ au FileType objc   setl ts=4 sw=4 expandtab
 au FileType coffee setl ts=2 sw=2 sts=2  expandtab
 
 " auto completion for html tag
-au FileType html,eruby inoremap <silent> <buffer> </ </<C-p>>
 au FileType eruby      inoremap <silent> <% <%<space><space>%><left><left><left>
 
 au FileType cpp inoremap <silent> <buffer> {<return> {}<left><cr><esc><S-o>
