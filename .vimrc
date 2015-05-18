@@ -54,6 +54,9 @@ NeoBundle 'szw/vim-tags'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'sophacles/vim-processing'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 
 let g:indentLine_color_term = 244
 
@@ -137,7 +140,7 @@ endif
 noremap pp "0p
 
 au BufNewFile,BufRead,BufReadPre *.coffee setf coffee
-au BufNewFile,BufRead            *.md     setf markdown
+au BufNewFile,BufRead            *.md     set filetype=markdown
 au BufNewFile,BufRead            *.sjs    setf javascript
 au BufNewFile,BufRead            *.som    setf st
 
