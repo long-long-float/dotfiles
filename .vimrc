@@ -101,6 +101,8 @@ let g:vim_json_syntax_conceal = 0
 "
 " editor settings
 "
+syntax on
+
 set nowritebackup
 set nobackup
 set swapfile
