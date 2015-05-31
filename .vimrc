@@ -57,6 +57,7 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tsukkee/unite-tag'
 
 let g:indentLine_color_term = 244
 
