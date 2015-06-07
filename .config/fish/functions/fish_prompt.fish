@@ -118,7 +118,7 @@ end
 
 function prompt_status -d "the symbols for a non zero exit status, root and background jobs"
   if [ $RETVAL -ne 0 ]
-    prompt_segment white red $RETVAL
+    prompt_segment white red "⚠ $RETVAL"
   end
 
   # if superuser (uid == 0)
@@ -141,6 +141,5 @@ function fish_prompt
   set -g RETVAL $status
   prompt_user; prompt_dir; prompt_git; prompt_status; prompt_finish
   echo
-  set_color green
-  echo "➤ "
+  prompt_segment black yellow "\$"; prompt_finish
 end
