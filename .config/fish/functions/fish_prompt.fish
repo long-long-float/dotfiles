@@ -11,8 +11,6 @@
 set -g theme_display_user yes
 set -g default_user your_normal_user
 
-
-
 set -g current_bg NONE
 set segment_separator \uE0B0
 set right_segment_separator \uE0B0
@@ -92,7 +90,7 @@ function prompt_user -d "Display actual user if different from $default_user"
 end
 
 function prompt_dir -d "Display the actual directory"
-  prompt_segment blue white (prompt_pwd)
+  prompt_segment blue white (my_pwd)
 end
 
 function prompt_git -d "Display the actual git state"

@@ -10,6 +10,7 @@ DOT_FILES=(
   .dir_colors
   #fish
   .config/fish/config.fish .config/fish/functions/fish_prompt.fish
+  .config/fish/functions/my_pwd.fish
   )
 
 mkdir -p $HOME/.config/fish/functions
