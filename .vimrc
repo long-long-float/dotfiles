@@ -58,6 +58,7 @@ NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tsukkee/unite-tag'
+NeoBundle 'ekalinin/Dockerfile.vim'
 
 let g:indentLine_color_term = 244
 
