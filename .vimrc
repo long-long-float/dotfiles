@@ -142,7 +142,7 @@ endif
 
 au BufNewFile,BufRead,BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead            *.md     set filetype=markdown
-au BufNewFile,BufRead            *.sjs    setf javascript
+au BufNewFile,BufRead            *.sjs,*pegjs setf javascript
 au BufNewFile,BufRead            *.som    setf st
 
 " remove tail spece before saving
