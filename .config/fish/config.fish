@@ -48,13 +48,22 @@ set PATH $HOME/dex2jar $PATH
 set PATH $HOME/.local/bin $PATH
 
 # For rbenv
-set PATH $HOME/.rbenv/bin $HOME/.rbenv/shims $PATH
-set PATH $HOME/.rbenv/plugins/ruby-build/bin $PATH
-rbenv rehash >/dev/null ^&1
+if [ -e $HOME/.rbenv ]
+  set PATH $HOME/.rbenv/bin $HOME/.rbenv/shims $PATH
+  set PATH $HOME/.rbenv/plugins/ruby-build/bin $PATH
+  rbenv rehash >/dev/null ^&1
+end
 
 # For nodebrew
-set NODE_PATH $HOME/.nodebrew/node/v0.11.12/lib
-set PATH $HOME/.nodebrew/current/bin $NODE_PATH $PATH
+if [ -e $HOME/.nodebrew ]
+  set NODE_PATH $HOME/.nodebrew/node/v0.11.12/lib
+  set PATH $HOME/.nodebrew/current/bin $NODE_PATH $PATH
+end
+
+# For perlbrew
+if [ -e $HOME/perl5/perlbrew ]
+  set PATH $HOME/perl5/perlbrew/bin $PATH
+end
 
 # For PebbleSDK
 set PATH $HOME/pebble-dev/PebbleSDK-2.0.2/bin $PATH
