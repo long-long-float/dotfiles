@@ -60,6 +60,8 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'dag/vim-fish'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'clausreinke/typescript-tools.vim'
 
 let g:indentLine_color_term = 244
 
