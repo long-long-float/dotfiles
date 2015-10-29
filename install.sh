@@ -13,25 +13,16 @@ DOT_FILES=(
   .config/fish/functions/my_pwd.fish
   )
 
-mkdir -p $HOME/.config/fish/functions
+[ ! -d ~/.config/fish/functions ] && mkdir -p $HOME/.config/fish/functions
+[ ! -d ~/.vim/conf ] && mkdir -p $HOME/.vim/conf
 
 for file in ${DOT_FILES[@]}
 do
   if [ -e $HOME/$file ]; then
-    echo "existing $file. override?[y/n] : "
-    read yn
-    if [ "$yn" = "y" ]; then
-      ln -sf `pwd`/$file $HOME/$file
-      echo "linked $file"
-    fi
+    echo "skip to make link because $file exists"
   else
     ln -s `pwd`/$file $HOME/$file
     echo "linked $file"
   fi
 done
 
-# install oh-my-fish
-[ ! -d ~/.oh-my-fish ] && curl -L https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish | fish
-
-# install neobundle
-[ ! -d ~/.vim/bundle ] && mkdir -p ~/.vim/bundle && git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim && echo "you should run following command to setup plugins -> vim -c ':NeoBundleInstall'"
