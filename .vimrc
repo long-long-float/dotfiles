@@ -62,6 +62,7 @@ NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'dag/vim-fish'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'clausreinke/typescript-tools.vim'
+NeoBundle 'slim-template/vim-slim'
 
 let g:indentLine_color_term = 244
 
