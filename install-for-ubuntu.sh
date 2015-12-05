@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! type fish >/dev/null 2>&1 ]; then
+if [ ! `type fish >/dev/null 2>&1` ]; then
   # install fish shell
   sudo apt-add-repository -y ppa:fish-shell/release-2
   sudo apt-get update
