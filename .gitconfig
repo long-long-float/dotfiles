@@ -12,3 +12,4 @@
 	c = commit
 	a = add
 	d = diff
+  co = checkout
