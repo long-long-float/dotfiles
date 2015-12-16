@@ -83,7 +83,7 @@ end
 function prompt_user -d "Display actual user if different from $default_user"
   if [ "$theme_display_user" = "yes" ]
     if [ "$USER" != "$default_user" -o -n "$SSH_CLIENT" ]
-      set USER_PROMPT (whoami)@(hostname)
+      set USER_PROMPT (whoami)
       prompt_segment cyan white $USER_PROMPT
     end
   end
