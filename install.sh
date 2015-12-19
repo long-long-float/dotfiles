@@ -5,6 +5,7 @@ DOT_FILES=(
   .aprc .pryrc .gemrc
   # vim
   .vimrc .gvimrc .vim/conf/theme.vim
+  .vimperatorrc
   .tmux.conf
   .gitconfig
   .dir_colors
