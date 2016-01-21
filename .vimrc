@@ -172,6 +172,12 @@ let g:quickrun_config = {
   \ },
   \}
 
+" move cursor as is
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up>   gk
+
 " load splited vimrc
 set rtp+=$HOME/.vim
 runtime! conf/*.vim
