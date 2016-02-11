@@ -51,7 +51,13 @@ set PATH $HOME/.local/bin $PATH
 if [ -e $HOME/.rbenv ]
   set PATH $HOME/.rbenv/bin $HOME/.rbenv/shims $PATH
   set PATH $HOME/.rbenv/plugins/ruby-build/bin $PATH
-  rbenv rehash >/dev/null ^&1
+  . (rbenv init - | psub)
+end
+
+# For crenv
+if [ -e $HOME/.crenv ]
+  set PATH $HOME/.crenv/bin $PATH
+  . (crenv init - | psub)
 end
 
 # For nodebrew
