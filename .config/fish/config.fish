@@ -86,3 +86,15 @@ alias g++11="g++ -std=c++11"
 alias tmux="tmux -2" # run as 256 mode
 alias memcheck="valgrind --tool=memcheck --leak-check=yes"
 alias dc="cd"
+
+# functions
+
+function nofi
+  if [ $status -eq 0 ]
+    notify-send "successfully finished"
+  else
+    notify-send "failed!"
+  end
+end
+
+
