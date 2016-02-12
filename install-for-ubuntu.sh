@@ -11,6 +11,15 @@ if [ ! `type fish >/dev/null 2>&1` ]; then
   echo "installed fish shell"
 fi
 
+if [ ! -e $HOME/.tmux/tmux-powerline ]; then
+  [ ! -e $HOME/.tmux ] && mkdir $HOME/.tmux
+
+  # install tmux-powerline
+  git clone https://github.com/erikw/tmux-powerline.git $HOME/.tmux
+
+  echo "installed tmux-powerline"
+fi
+
 if [ ! -e $HOME/.rbenv ]; then
   # install rbenv
   sudo apt-get -y install build-essential bison libreadline6-dev curl git-core zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libncurses5-dev

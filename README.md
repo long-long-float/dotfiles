@@ -25,11 +25,6 @@ sudo apt-get install build-essential bison libreadline6-dev curl git zlib1g-dev 
 参考: http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin
 Lokaltog/powerlineはDEPLICATEDなのでpowerline/powerlineをインストールする
 
-```
-$ mkdir ~/.tmux ; cd ~/.tmux
-$ git clone https://github.com/erikw/tmux-powerline.git
-```
-
 ### javaのインストール
 
 http://qiita.com/civic/items/daefe465600ca45d6c11
