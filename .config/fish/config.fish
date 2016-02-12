@@ -1,28 +1,3 @@
-# Path to your oh-my-fish.
-set fish_path $HOME/.oh-my-fish
-
-# Theme
-#set fish_theme agnoster
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
-# Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
-# Example format: set fish_plugins autojump bundler
-
-# Path to your custom folder (default path is $FISH/custom)
-#set fish_custom $HOME/dotfiles/oh-my-fish
-
-# Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
-
-set fish_plugins git rails
-
-#function fish_prompt
-#  ~/powerline-shell/powerline-shell.py $status --shell bare ^/dev/null
-#end
-
-# 自分でビルドしたやつ
-set PATH $HOME/local/bin $PATH
-
 set os (uname)
 if [ $os = "Linux" ]
   # For linuxbrew
@@ -43,9 +18,11 @@ else if [ $os = "Darwin" ]
   set MANPATH (brew --prefix coreutils)/libexec/gnuman $MANPATH
 end
 
-set PATH $HOME/bin $PATH
-set PATH $HOME/dex2jar $PATH
-set PATH $HOME/.local/bin $PATH
+# self built apps
+[ -e $HOME/local/bin ] ; and set PATH $HOME/local/bin $PATH
+
+# For python bin
+[ -e $HOME/.local/bin ] ; and set PATH $HOME/.local/bin $PATH
 
 # For rbenv
 if [ -e $HOME/.rbenv ]
@@ -67,12 +44,7 @@ if [ -e $HOME/.nodebrew ]
 end
 
 # For perlbrew
-if [ -e $HOME/perl5/perlbrew ]
-  set PATH $HOME/perl5/perlbrew/bin $PATH
-end
-
-# For PebbleSDK
-set PATH $HOME/pebble-dev/PebbleSDK-2.0.2/bin $PATH
+[ -e $HOME/perl5/perlbrew ] ; and set PATH $HOME/perl5/perlbrew/bin $PATH
 
 if type -P dircolors >/dev/null
   eval (dircolors -c ~/.dir_colors | sed 's/>&\/dev\/null$//')
@@ -96,5 +68,4 @@ function nofi
     notify-send "failed!"
   end
 end
-
 
