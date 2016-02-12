@@ -4,7 +4,7 @@ DOT_FILES=(
   # ruby
   .aprc .pryrc .gemrc
   # vim
-  .vimrc .gvimrc .vim/conf/theme.vim
+  .vimrc .gvimrc
   .vimperatorrc
   .tmux.conf
   .gitconfig
@@ -17,6 +17,8 @@ DOT_FILES=(
 
 [ ! -d ~/.config/fish/functions ] && mkdir -p $HOME/.config/fish/functions
 [ ! -d ~/.vim/conf ] && mkdir -p $HOME/.vim/conf
+
+cp .vim/conf/theme.vim.sample $HOME/.vim/conf/theme.vim
 
 for file in ${DOT_FILES[@]}
 do
