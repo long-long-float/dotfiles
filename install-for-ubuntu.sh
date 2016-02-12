@@ -20,6 +20,14 @@ if [ ! -e $HOME/.rbenv ]; then
   echo "installed rbenv"
 fi
 
+if [ ! -e $HOME/.crenv ]; then
+  # install crenv
+  curl -L https://raw.github.com/pine613/crenv/master/install.sh | bash
+  git clone https://github.com/pine613/crystal-build.git ~/.crenv/plugins/crystal-build
+
+  echo "installed crenv"
+fi
+
 # install neobundle
 if [ ! -e ~/.vim/bundle ]; then
   mkdir -p ~/.vim/bundle
