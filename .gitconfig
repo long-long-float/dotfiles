@@ -13,3 +13,4 @@
 	a = add
 	d = diff
   co = checkout
+  b = branch
