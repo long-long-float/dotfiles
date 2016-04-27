@@ -33,6 +33,18 @@ http://qiita.com/civic/items/daefe465600ca45d6c11
 
 http://ksino.hatenablog.com/entry/2014/06/08/171030
 
+### CapsLockキーとCtrlキーを入れ替える
+
+https://wiki.ubuntulinux.jp/UbuntuTips/Desktop/HowToSetCapsLockAsCtrl
+
+### キーボード入力中はタッチパッドを切る
+
+```
+syndaemon -d
+```
+
+https://wiki.ubuntulinux.jp/UbuntuTips/Hardware/ConfiguringTouchPad
+
 # vimのインストール方法
 
 ## Ubuntu
