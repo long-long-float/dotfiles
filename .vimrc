@@ -63,6 +63,7 @@ NeoBundle 'dag/vim-fish'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'clausreinke/typescript-tools.vim'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'fatih/vim-go'
 
 let g:indentLine_color_term = 244
 

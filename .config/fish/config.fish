@@ -46,6 +46,9 @@ end
 # For perlbrew
 [ -e $HOME/perl5/perlbrew ] ; and set PATH $HOME/perl5/perlbrew/bin $PATH
 
+# For go-lang
+set -x GOROOT $HOME/.local/share/umake/go/go-lang
+
 if type -P dircolors >/dev/null
   eval (dircolors -c ~/.dir_colors | sed 's/>&\/dev\/null$//')
 end
