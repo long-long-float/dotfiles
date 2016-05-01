@@ -27,8 +27,6 @@ NeoBundle 'sudar/vim-arduino-syntax'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'vim-scripts/st.vim'
 NeoBundle 'sudo.vim'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Align'
 NeoBundle 'tpope/vim-rails'
@@ -53,6 +51,8 @@ NeoBundle 'szw/vim-tags'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'sophacles/vim-processing'
+" tabular must come before vim-markdown
+NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
@@ -164,6 +164,7 @@ au FileType cpp inoremap <silent> <buffer> {<return> {}<left><cr><esc><S-o>
 
 " makrdown
 let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_conceal = 0
 
 let g:quickrun_config = {
   \ "_": {
