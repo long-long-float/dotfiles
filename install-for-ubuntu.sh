@@ -31,8 +31,7 @@ fi
 
 if [ ! -e $HOME/.crenv ]; then
   # install crenv
-  curl -L https://raw.github.com/pine613/crenv/master/install.sh | bash
-  git clone https://github.com/pine613/crystal-build.git ~/.crenv/plugins/crystal-build
+  curl -L https://raw.github.com/pine/crenv/master/install.sh | bash
 
   echo "installed crenv"
 fi
