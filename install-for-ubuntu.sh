@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! `type fish >/dev/null 2>&1` ]; then
+if [ `type fish >/dev/null 2>&1` ]; then
   # install fish shell
   sudo apt-add-repository -y ppa:fish-shell/release-2
   sudo apt-get update
@@ -41,4 +41,15 @@ if [ ! -e ~/.vim/bundle ]; then
   mkdir -p ~/.vim/bundle
   git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
   echo "you should run following command to setup plugins -> vim -c ':NeoBundleInstall'"
+
+rbenv=$HOME/.rbenv/bin/rbenv
+
+ruby_version=`ruby -v | grep -oe "[0-9]\.[0-9]\.[0-9]"`
+latest_ruby_version=`$HOME/.rbenv/bin/rbenv install -l | grep -v - | tail -1`
+if [ $ruby_version != $latest_ruby_version ]; then
+  echo "install ruby$latest_ruby_version..."
+  $rbenv install $latest_ruby_version
+  $rbenv global $latest_ruby_version
+
+  `$rbenv prefix`/bin/gem install pry awesome_print rubocop refe2
 fi
