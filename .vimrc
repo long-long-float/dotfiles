@@ -9,55 +9,68 @@ if &compatible
   set nocompatible
 endif
 
-set runtimepath^=.vim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-call dein#begin(expand('.vim/dein'))
+call dein#begin(expand('~/.vim/dein'))
 
 " Let dein manage dein
 call dein#add('Shougo/dein.vim')
 
+" neo**
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/neosnippet')
 call dein#add('Shougo/neosnippet-snippets')
+
+" editing
 call dein#add('Townk/vim-autoclose')
-call dein#add('w0ng/vim-hybrid')
-call dein#add('sickill/vim-monokai')
-call dein#add('tomasr/molokai')
 call dein#add('tpope/vim-endwise')
-call dein#add('airblade/vim-gitgutter')
-call dein#add('kchmck/vim-coffee-script')
-call dein#add('Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'})
-call dein#add('sudar/vim-arduino-syntax')
-call dein#add('derekwyatt/vim-scala')
-call dein#add('vim-scripts/st.vim')
-call dein#add('sudo.vim')
-call dein#add('tpope/vim-fugitive')
 call dein#add('Align')
 call dein#add('tpope/vim-rails')
 call dein#add('stevemadere/ruby-matchit')
-call dein#add('thinca/vim-quickrun')
-call dein#add('Shougo/vimproc', {'build': 'make'})
 call dein#add('tpope/vim-surround')
-call dein#add('Yggdroot/indentLine')
-call dein#add('Shougo/neocomplete.vim')
 call dein#add('marcus/rsense')
 call dein#add('thinca/vim-ref')
-call dein#add('yuku-t/vim-ref-ri')
-call dein#add('szw/vim-tags')
+call dein#add('kannokanno/previm')
+call dein#add('tyru/open-browser.vim')
+
+" Unite
+call dein#add('Shougo/unite.vim')
+call dein#add('tsukkee/unite-tag')
+call dein#add('basyura/unite-rails')
+
+" display
+call dein#add('airblade/vim-gitgutter')
+call dein#add('Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'})
+call dein#add('Yggdroot/indentLine')
+
+" themes
+call dein#add('w0ng/vim-hybrid')
+call dein#add('sickill/vim-monokai')
+call dein#add('tomasr/molokai')
+
+" languages
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('sudar/vim-arduino-syntax')
+call dein#add('derekwyatt/vim-scala')
+call dein#add('vim-scripts/st.vim')
 call dein#add('elzr/vim-json')
 call dein#add('othree/html5.vim')
 call dein#add('sophacles/vim-processing')
-" tabular must come before vim-markdown
-call dein#add('godlygeek/tabular')
+call dein#add('godlygeek/tabular') " tabular must come before vim-markdown
 call dein#add('plasticboy/vim-markdown')
-call dein#add('kannokanno/previm')
-call dein#add('tyru/open-browser.vim')
-call dein#add('Shougo/unite.vim')
-call dein#add('tsukkee/unite-tag')
 call dein#add('ekalinin/Dockerfile.vim')
 call dein#add('dag/vim-fish')
 call dein#add('leafgarland/typescript-vim')
 call dein#add('clausreinke/typescript-tools.vim')
 call dein#add('slim-template/vim-slim')
 call dein#add('fatih/vim-go')
+
+" external
+call dein#add('tpope/vim-fugitive')
+call dein#add('thinca/vim-quickrun')
+call dein#add('Shougo/vimproc', {'build': 'make'})
+
+" call dein#add('szw/vim-tags')
 
 call dein#end()
 
@@ -85,7 +98,6 @@ set laststatus=2
 "
 " Rsense
 "
-" let g:rsenseHome = '/usr/local/lib/rsense-0.3'
 let g:rsenseUseOmniFunc = 1
 
 "

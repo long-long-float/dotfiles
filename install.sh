@@ -30,3 +30,6 @@ do
   fi
 done
 
+if [ ! -e $HOME/.rsense ]; then
+  ruby ~/.vim/dein/repos/github.com/marcus/rsense/etc/config.rb  > ~/.rsense
+fi
