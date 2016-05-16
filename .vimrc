@@ -3,75 +3,71 @@ if $SHELL =~ 'fish'
   set shell=/bin/sh
 endif
 
-"
-" NeoBundle
-"
-if has('vim_starting')
+"dein Scripts-----------------------------
+
+if &compatible
   set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
+set runtimepath^=.vim/dein/repos/github.com/Shougo/dein.vim
 
-" plugins
-NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'sickill/vim-monokai'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-NeoBundle 'sudar/vim-arduino-syntax'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'vim-scripts/st.vim'
-NeoBundle 'sudo.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Align'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'stevemadere/ruby-matchit'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'Shougo/vimproc', {
-    \ 'build' : {
-    \     'windows' : 'make -f make_mingw32.mak',
-    \     'cygwin' : 'make -f make_cygwin.mak',
-    \     'mac' : 'make -f make_mac.mak',
-    \     'unix' : 'make -f make_unix.mak',
-    \    },
-    \ }
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'marcus/rsense'
-NeoBundle 'supermomonga/neocomplete-rsense.vim'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'yuku-t/vim-ref-ri'
-NeoBundle 'szw/vim-tags'
-NeoBundle 'elzr/vim-json'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'sophacles/vim-processing'
+call dein#begin(expand('.vim/dein'))
+
+" Let dein manage dein
+call dein#add('Shougo/dein.vim')
+
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('Townk/vim-autoclose')
+call dein#add('w0ng/vim-hybrid')
+call dein#add('sickill/vim-monokai')
+call dein#add('tomasr/molokai')
+call dein#add('tpope/vim-endwise')
+call dein#add('airblade/vim-gitgutter')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'})
+call dein#add('sudar/vim-arduino-syntax')
+call dein#add('derekwyatt/vim-scala')
+call dein#add('vim-scripts/st.vim')
+call dein#add('sudo.vim')
+call dein#add('tpope/vim-fugitive')
+call dein#add('Align')
+call dein#add('tpope/vim-rails')
+call dein#add('stevemadere/ruby-matchit')
+call dein#add('thinca/vim-quickrun')
+call dein#add('Shougo/vimproc', {'build': 'make'})
+call dein#add('tpope/vim-surround')
+call dein#add('Yggdroot/indentLine')
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('marcus/rsense')
+call dein#add('thinca/vim-ref')
+call dein#add('yuku-t/vim-ref-ri')
+call dein#add('szw/vim-tags')
+call dein#add('elzr/vim-json')
+call dein#add('othree/html5.vim')
+call dein#add('sophacles/vim-processing')
 " tabular must come before vim-markdown
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'tsukkee/unite-tag'
-NeoBundle 'ekalinin/Dockerfile.vim'
-NeoBundle 'dag/vim-fish'
-NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'clausreinke/typescript-tools.vim'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'fatih/vim-go'
+call dein#add('godlygeek/tabular')
+call dein#add('plasticboy/vim-markdown')
+call dein#add('kannokanno/previm')
+call dein#add('tyru/open-browser.vim')
+call dein#add('Shougo/unite.vim')
+call dein#add('tsukkee/unite-tag')
+call dein#add('ekalinin/Dockerfile.vim')
+call dein#add('dag/vim-fish')
+call dein#add('leafgarland/typescript-vim')
+call dein#add('clausreinke/typescript-tools.vim')
+call dein#add('slim-template/vim-slim')
+call dein#add('fatih/vim-go')
 
-let g:indentLine_color_term = 244
-
-call neobundle#end()
+call dein#end()
 
 filetype plugin indent on
 
-NeoBundleCheck
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
 
 "
 " Powerline
