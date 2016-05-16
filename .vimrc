@@ -156,6 +156,7 @@ au FileType c      setl ts=8 sw=4 noexpandtab
 au FileType ruby   setl tw=0 sw=2 tabstop=8 nowrap expandtab
 au FileType objc   setl ts=4 sw=4 expandtab
 au FileType coffee setl ts=2 sw=2 sts=2  expandtab
+au FileType markdown setl ts=4 sw=4 expandtab
 
 " auto completion for html tag
 au FileType eruby      inoremap <silent> <% <%<space><space>%><left><left><left>
