@@ -116,6 +116,18 @@ let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 "
 let g:vim_json_syntax_conceal = 0
 
+" makrdown
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_conceal = 0
+
+let g:quickrun_config = {
+  \ "_": {
+  \   "runner": "vimproc",
+  \   "runner/vimproc/updatetime": 60,
+  \   "outputter/buffer/into": 1
+  \ },
+  \}
+
 "
 " editor settings
 "
@@ -170,18 +182,6 @@ au FileType markdown setl ts=4 sw=4 expandtab
 au FileType eruby      inoremap <silent> <% <%<space><space>%><left><left><left>
 
 au FileType cpp inoremap <silent> <buffer> {<return> {}<left><cr><esc><S-o>
-
-" makrdown
-let g:vim_markdown_folding_disabled=1
-let g:vim_markdown_conceal = 0
-
-let g:quickrun_config = {
-  \ "_": {
-  \   "runner": "vimproc",
-  \   "runner/vimproc/updatetime": 60,
-  \   "outputter/buffer/into": 1
-  \ },
-  \}
 
 " move cursor as is
 nnoremap j gj
