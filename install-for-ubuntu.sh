@@ -36,11 +36,12 @@ if [ ! -e $HOME/.crenv ]; then
   echo "installed crenv"
 fi
 
-# install neobundle
-if [ ! -e ~/.vim/bundle ]; then
-  mkdir -p ~/.vim/bundle
-  git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-  echo "you should run following command to setup plugins -> vim -c ':NeoBundleInstall'"
+# install dein
+if [ ! -e ~/.vim/dein ]; then
+  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh | sh
+
+  echo "installed dein"
+fi
 
 rbenv=$HOME/.rbenv/bin/rbenv
 
