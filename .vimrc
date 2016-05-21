@@ -66,6 +66,7 @@ call dein#add('leafgarland/typescript-vim')
 call dein#add('clausreinke/typescript-tools.vim')
 call dein#add('slim-template/vim-slim')
 call dein#add('fatih/vim-go')
+call dein#add('othree/yajs.vim')
 
 " external
 call dein#add('tpope/vim-fugitive')
