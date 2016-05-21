@@ -37,6 +37,8 @@ call dein#add('tyru/open-browser.vim')
 call dein#add('Shougo/unite.vim')
 call dein#add('tsukkee/unite-tag')
 call dein#add('basyura/unite-rails')
+call dein#add('Shougo/neomru.vim')
+call dein#add('Shougo/neoyank.vim')
 
 " display
 call dein#add('airblade/vim-gitgutter')
