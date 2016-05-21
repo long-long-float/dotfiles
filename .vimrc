@@ -115,6 +115,15 @@ endif
 let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 
 "
+" neosnippet
+"
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+"
 " vim-json
 "
 let g:vim_json_syntax_conceal = 0
@@ -166,6 +175,9 @@ if OSTYPE == "Darwin\n"
 endif
 
 " key maps
+nmap <Space> [unite]
+nnoremap [unite]t :<C-u>Unite tab<CR>
+nnoremap [unite]f :<C-u>Unite buffer file_mru<CR>
 
 au BufNewFile,BufRead,BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead            *.md     set filetype=markdown
@@ -181,9 +193,7 @@ au FileType objc   setl ts=4 sw=4 expandtab
 au FileType coffee setl ts=2 sw=2 sts=2  expandtab
 au FileType markdown setl ts=4 sw=4 expandtab
 
-" auto completion for html tag
 au FileType eruby      inoremap <silent> <% <%<space><space>%><left><left><left>
-
 au FileType cpp inoremap <silent> <buffer> {<return> {}<left><cr><esc><S-o>
 
 " move cursor as is
