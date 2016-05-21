@@ -5,6 +5,7 @@ DOT_FILES=(
   .aprc .pryrc .gemrc
   # vim
   .vimrc .gvimrc
+  .vim/templates
   .vimperatorrc
   .tmux.conf
   .gitconfig
