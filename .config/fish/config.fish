@@ -39,7 +39,7 @@ end
 
 # For nodebrew
 if [ -e $HOME/.nodebrew ]
-  set NODE_PATH $HOME/.nodebrew/node/v0.11.12/lib
+  set NODE_PATH $HOME/.nodebrew/current/lib
   set PATH $HOME/.nodebrew/current/bin $NODE_PATH $PATH
 end
 
