@@ -2,7 +2,7 @@ set os (uname)
 if [ $os = "Linux" ]
   # For linuxbrew
   set PATH     $HOME/.linuxbrew/bin        $PATH
-  set MANPATH  $HOME/.linuxbrew/share/man  $MANPATH
+  set MANPATH  $HOME/.linuxbrew/share/man:
   set INFOPATH $HOME/.linuxbrew/share/info $INFOPATH
   set -x LD_LIBRARY_PATH $HOME/.linuxbrew/lib $LD_LIBRARY_PATH
 
@@ -48,6 +48,7 @@ end
 
 # For go-lang
 set -x GOROOT $HOME/.local/share/umake/go/go-lang
+set -x GOPATH $HOME/.go
 
 if type -P dircolors >/dev/null
   eval (dircolors -c ~/.dir_colors | sed 's/>&\/dev\/null$//')
