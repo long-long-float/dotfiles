@@ -140,6 +140,9 @@ let g:quickrun_config = {
   \ },
   \}
 
+" previm
+let g:previm_show_header = 0
+
 "
 " editor settings
 "
