@@ -14,3 +14,10 @@
 	d = diff
   co = checkout
   b = branch
+
+[merge]
+  tool = unityyamlmerge
+
+[mergetool "unityyamlmerge"]
+  trustExitCode = false
+  cmd = /opt/Unity/Editor/Data/Tools/UnityYAMLMerge merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
