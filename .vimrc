@@ -191,6 +191,7 @@ au BufNewFile,BufRead,BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead            *.md     set filetype=markdown
 au BufNewFile,BufRead            *.sjs,*pegjs setf javascript
 au BufNewFile,BufRead            *.som    setf st
+au BufNewFile,BufRead            *.vue    setf javascript
 
 au BufNewFile *.html 0r $HOME/.vim/templates/.html
 
