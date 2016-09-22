@@ -174,10 +174,7 @@ set backspace=start,eol,indent
 
 let loaded_matchparen = 1
 
-let OSTYPE = system('uname')
-if OSTYPE == "Darwin\n"
-  noremap ; :
-endif
+noremap ; :
 
 " key maps
 nmap <Space> [unite]
