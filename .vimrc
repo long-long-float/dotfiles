@@ -32,6 +32,7 @@ call dein#add('marcus/rsense')
 call dein#add('thinca/vim-ref')
 call dein#add('kannokanno/previm')
 call dein#add('tyru/open-browser.vim')
+call dein#add('tyru/caw.vim')
 
 " Unite
 call dein#add('Shougo/unite.vim')
@@ -181,6 +182,9 @@ endif
 nmap <Space> [unite]
 nnoremap [unite]t :<C-u>Unite tab<CR>
 nnoremap [unite]f :<C-u>Unite buffer file_mru<CR>
+
+nmap <C-k> <Plug>(caw:i:toggle)
+vmap <C-k> <Plug>(caw:i:toggle)
 
 au BufNewFile,BufRead,BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead            *.md     set filetype=markdown
