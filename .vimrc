@@ -200,6 +200,7 @@ au FileType ruby   setl tw=0 sw=2 tabstop=8 nowrap expandtab
 au FileType objc   setl ts=4 sw=4 expandtab
 au FileType coffee setl ts=2 sw=2 sts=2  expandtab
 au FileType markdown setl ts=4 sw=4 expandtab
+au FileType python   setl tw=0 sw=4 tabstop=8 expandtab
 
 au FileType eruby      inoremap <silent> <% <%<space><space>%><left><left><left>
 au FileType cpp inoremap <silent> <buffer> {<return> {}<left><cr><esc><S-o>
