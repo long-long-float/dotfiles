@@ -3,6 +3,7 @@
 	email = niinikazuki@yahoo.co.jp
 [core]
 	editor = vim
+	whitespace = cr-at-eol
 [push]
 	default = simple
 [color]
