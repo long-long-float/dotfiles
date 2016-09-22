@@ -50,6 +50,7 @@ call dein#add('Yggdroot/indentLine')
 call dein#add('w0ng/vim-hybrid')
 call dein#add('sickill/vim-monokai')
 call dein#add('tomasr/molokai')
+call dein#add('altercation/vim-colors-solarized')
 
 " languages
 call dein#add('kchmck/vim-coffee-script')
