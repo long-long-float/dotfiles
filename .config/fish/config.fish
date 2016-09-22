@@ -6,6 +6,8 @@ if [ $os = "Linux" ]
   set INFOPATH $HOME/.linuxbrew/share/info $INFOPATH
   set -x LD_LIBRARY_PATH $HOME/.linuxbrew/lib $LD_LIBRARY_PATH
 
+  set PATH $HOME/.local/share/umake/ide/visual-studio-code $PATH
+
   # key repeat configure
   if [ "$DISPLAY"  ]
     xset r rate 400 60
