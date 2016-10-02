@@ -15,7 +15,7 @@ if [ ! -e $HOME/.tmux/tmux-powerline ]; then
   [ ! -e $HOME/.tmux ] && mkdir $HOME/.tmux
 
   # install tmux-powerline
-  git clone https://github.com/erikw/tmux-powerline.git $HOME/.tmux
+  git clone https://github.com/erikw/tmux-powerline.git $HOME/.tmux/tmux-powerline
 
   echo "installed tmux-powerline"
 fi
@@ -38,7 +38,8 @@ fi
 
 # install dein
 if [ ! -e ~/.vim/dein ]; then
-  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh | sh
+  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+  sh installer.sh ~/.vim/dein
 
   echo "installed dein"
 fi
