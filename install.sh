@@ -7,7 +7,7 @@ DOT_FILES=(
   .vimrc .gvimrc
   .vim/templates
   .vimperatorrc
-  .tmux.conf
+  .tmux.conf .tmux-powerlinerc
   .gitconfig
   .dir_colors
   .rainbarf.conf
