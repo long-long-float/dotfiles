@@ -43,7 +43,7 @@ call dein#add('Shougo/neoyank.vim')
 
 " display
 call dein#add('airblade/vim-gitgutter')
-call dein#add('Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'})
+call dein#add('powerline/powerline', {'rtp': 'powerline/bindings/vim/'})
 call dein#add('Yggdroot/indentLine')
 
 " themes
