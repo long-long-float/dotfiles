@@ -181,6 +181,9 @@ nmap <Space> [unite]
 nnoremap [unite]t :<C-u>Unite tab<CR>
 nnoremap [unite]f :<C-u>Unite buffer file_mru<CR>
 
+nnoremap <C-n> gt
+nnoremap <C-p> gT
+
 nmap <C-k> <Plug>(caw:i:toggle)
 vmap <C-k> <Plug>(caw:i:toggle)
 
