@@ -56,6 +56,9 @@ if type -P dircolors >/dev/null
   eval (dircolors -c ~/.dir_colors | sed 's/>&\/dev\/null$//')
 end
 
+# http://qiita.com/delphinus/items/b04752bb5b64e6cc4ea9
+set -x LESS '-iMR'
+
 # aliases
 alias be="bundle exec"
 alias ccat="pygmentize -g"
