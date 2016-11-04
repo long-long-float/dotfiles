@@ -214,6 +214,10 @@ nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
 
+" netrw
+let g:netrw_liststyle = 3
+nnoremap t :<C-u> Texplore<CR>
+
 " load splited vimrc
 set rtp+=$HOME/.vim
 runtime! conf/*.vim
