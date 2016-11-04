@@ -174,6 +174,9 @@ set backspace=start,eol,indent
 
 let loaded_matchparen = 1
 
+set wildmenu
+set wildmode=longest,full
+
 noremap ; :
 
 " key maps
