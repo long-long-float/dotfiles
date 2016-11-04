@@ -52,6 +52,9 @@ end
 set -x GOROOT $HOME/.local/share/umake/go/go-lang
 set -x GOPATH $HOME/.go
 
+# For rustup
+[ -e $HOME/.cargo ]; and set PATH $HOME/.cargo/bin $PATH
+
 if type -P dircolors >/dev/null
   eval (dircolors -c ~/.dir_colors | sed 's/>&\/dev\/null$//')
 end
