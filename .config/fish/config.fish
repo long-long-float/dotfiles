@@ -70,6 +70,8 @@ alias g++11="g++ -std=c++11"
 alias tmux="tmux -2" # run as 256 mode
 alias memcheck="valgrind --tool=memcheck --leak-check=yes"
 alias dc="cd"
+alias ls="ls -h --color=always"
+alias pry="pry -r json -r yaml -r bigdecimal"
 
 # functions
 
