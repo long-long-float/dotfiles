@@ -11,6 +11,7 @@ DOT_FILES=(
   .gitconfig
   .dir_colors
   .rainbarf.conf
+  .ctags
   #fish
   .config/fish/config.fish .config/fish/functions/fish_prompt.fish
   .config/fish/functions/my_pwd.fish
