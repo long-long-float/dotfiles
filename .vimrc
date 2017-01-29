@@ -33,6 +33,7 @@ call dein#add('thinca/vim-ref')
 call dein#add('kannokanno/previm')
 call dein#add('tyru/open-browser.vim')
 call dein#add('tyru/caw.vim')
+call dein#add('Shougo/vinarise')
 
 " Unite
 call dein#add('Shougo/unite.vim')
