@@ -72,6 +72,7 @@ alias memcheck="valgrind --tool=memcheck --leak-check=yes"
 alias dc="cd"
 alias ls="ls -h --color=always"
 alias pry="pry -r json -r yaml -r bigdecimal"
+alias gdb="cgdb"
 
 # functions
 
@@ -82,4 +83,3 @@ function nofi
     notify-send "failed!"
   end
 end
-
