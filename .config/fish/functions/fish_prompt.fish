@@ -137,7 +137,7 @@ end
 
 function fish_prompt
   set -g RETVAL $status
-  prompt_user; prompt_dir; prompt_git; prompt_status; prompt_finish
+  prompt_dir; prompt_git; prompt_status; prompt_finish
   echo
-  prompt_segment black yellow "⌚ "(date +"%I:%M")" "; prompt_finish
+  echo "~> "
 end
