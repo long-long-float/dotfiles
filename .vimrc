@@ -24,7 +24,7 @@ call dein#add('Shougo/neosnippet-snippets')
 " editing
 call dein#add('Townk/vim-autoclose')
 call dein#add('tpope/vim-endwise')
-call dein#add('Align')
+call dein#add('vim-scripts/Align')
 call dein#add('tpope/vim-rails')
 call dein#add('stevemadere/ruby-matchit')
 call dein#add('tpope/vim-surround')
