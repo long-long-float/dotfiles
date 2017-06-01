@@ -189,8 +189,8 @@ nnoremap [unite]f :<C-u>Unite buffer file_mru<CR>
 nnoremap <C-n> gt
 nnoremap <C-p> gT
 
-nmap <C-k> <Plug>(caw:i:toggle)
-vmap <C-k> <Plug>(caw:i:toggle)
+nmap <C-k> <Plug>(caw:hatpos:toggle)
+vmap <C-k> <Plug>(caw:hatpos:toggle)
 
 au BufNewFile,BufRead,BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead            *.md     setf markdown
