@@ -8,6 +8,11 @@ if [ $os = "Linux" ]
 
   set PATH $HOME/.local/share/umake/ide/visual-studio-code $PATH
 
+  # For Android Studio
+  set ANDROID_HOME $HOME/Android/Sdk
+  set PATH $ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools $PATH
+  set PATH $HOME/local/android-studio/gradle/gradle-3.2/bin $PATH
+
   # key repeat configure
   if [ "$DISPLAY"  ]
     xset r rate 400 60
