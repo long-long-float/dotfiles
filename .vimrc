@@ -71,6 +71,7 @@ call dein#add('slim-template/vim-slim')
 call dein#add('fatih/vim-go')
 call dein#add('othree/yajs.vim')
 call dein#add('rust-lang/rust.vim')
+call dein#add('moro/vim-review')
 
 " external
 call dein#add('tpope/vim-fugitive')
@@ -194,10 +195,12 @@ vmap <C-k> <Plug>(caw:hatpos:toggle)
 
 au BufNewFile,BufRead,BufReadPre *.coffee setf coffee
 au BufNewFile,BufRead            *.md     setf markdown
+au BufNewFile,BufRead            *.md,*.re set wrap
 au BufNewFile,BufRead            *.sjs,*pegjs setf javascript
 au BufNewFile,BufRead            *.som    setf st
 au BufNewFile,BufRead            *.vue    setf javascript
 au BufNewFile,BufRead            *.nas    setf nasm
+au BufNewFile,BufRead            *.re     setf review
 
 au BufNewFile *.html 0r $HOME/.vim/templates/.html
 
