@@ -22,7 +22,7 @@ call dein#add('Shougo/neosnippet')
 call dein#add('Shougo/neosnippet-snippets')
 
 " editing
-call dein#add('Townk/vim-autoclose')
+call dein#add('cohama/lexima.vim')
 call dein#add('tpope/vim-endwise')
 call dein#add('vim-scripts/Align')
 call dein#add('tpope/vim-rails')
@@ -212,7 +212,6 @@ au FileType markdown setl ts=4 sw=4 expandtab
 au FileType python   setl tw=0 sw=4 tabstop=8 expandtab
 
 au FileType eruby      inoremap <silent> <% <%<space><space>%><left><left><left>
-au FileType cpp inoremap <silent> <buffer> {<return> {}<left><cr><esc><S-o>
 
 " move cursor as is
 nnoremap j gj
