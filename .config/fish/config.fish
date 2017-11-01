@@ -90,3 +90,7 @@ function nofi
     notify-send "failed!"
   end
 end
+
+function google
+  firefox "http://google.co.jp/search?q=$argv"
+end
