@@ -72,6 +72,7 @@ call dein#add('fatih/vim-go')
 call dein#add('othree/yajs.vim')
 call dein#add('rust-lang/rust.vim')
 call dein#add('moro/vim-review')
+call dein#add('rhysd/vim-rustpeg')
 
 " external
 call dein#add('tpope/vim-fugitive')
