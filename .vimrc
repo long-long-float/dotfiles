@@ -183,6 +183,8 @@ set wildmode=longest,full
 
 noremap ; :
 
+let g:tex_conceal=''
+
 " key maps
 nmap <Space> [unite]
 nnoremap [unite]t :<C-u>Unite tab<CR>
