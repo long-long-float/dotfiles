@@ -172,6 +172,9 @@ set nowrap
 set hlsearch
 set incsearch
 
+set cursorline
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=lightgray
+
 set mouse=a
 
 set backspace=start,eol,indent
