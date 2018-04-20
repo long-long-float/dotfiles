@@ -34,6 +34,7 @@ call dein#add('kannokanno/previm')
 call dein#add('tyru/open-browser.vim')
 call dein#add('tyru/caw.vim')
 call dein#add('Shougo/vinarise')
+call dein#add('editorconfig/editorconfig-vim')
 
 " Unite
 call dein#add('Shougo/unite.vim')
