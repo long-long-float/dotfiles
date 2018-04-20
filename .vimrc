@@ -17,9 +17,11 @@ call dein#begin(expand('~/.vim/dein'))
 call dein#add('Shougo/dein.vim')
 
 " neo**
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/neosnippet')
-call dein#add('Shougo/neosnippet-snippets')
+" call dein#add('Shougo/neocomplete.vim')
+" call dein#add('Shougo/neosnippet')
+" call dein#add('Shougo/neosnippet-snippets')
+" call dein#add('Shougo/neomru.vim')
+" call dein#add('Shougo/neoyank.vim')
 
 " editing
 call dein#add('cohama/lexima.vim')
@@ -28,8 +30,8 @@ call dein#add('vim-scripts/Align')
 call dein#add('tpope/vim-rails')
 call dein#add('stevemadere/ruby-matchit')
 call dein#add('tpope/vim-surround')
-call dein#add('marcus/rsense')
-call dein#add('thinca/vim-ref')
+" call dein#add('marcus/rsense')
+" call dein#add('thinca/vim-ref')
 call dein#add('kannokanno/previm')
 call dein#add('tyru/open-browser.vim')
 call dein#add('tyru/caw.vim')
@@ -40,8 +42,6 @@ call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Shougo/unite.vim')
 call dein#add('tsukkee/unite-tag')
 call dein#add('basyura/unite-rails')
-call dein#add('Shougo/neomru.vim')
-call dein#add('Shougo/neoyank.vim')
 
 " display
 call dein#add('airblade/vim-gitgutter')
@@ -109,27 +109,27 @@ set laststatus=2
 "
 " Rsense
 "
-let g:rsenseUseOmniFunc = 1
+" let g:rsenseUseOmniFunc = 1
 
 "
 " neocomplete.vim
 "
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
+" let g:acp_enableAtStartup = 0
+" let g:neocomplete#enable_at_startup = 1
+" let g:neocomplete#enable_smart_case = 1
+" if !exists('g:neocomplete#force_omni_input_patterns')
+"   let g:neocomplete#force_omni_input_patterns = {}
+" endif
+" let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 
 "
 " neosnippet
 "
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" xmap <C-k>     <Plug>(neosnippet_expand_target)
+" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"       \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 "
 " vim-json
@@ -174,9 +174,6 @@ set nowrap
 set hlsearch
 set incsearch
 
-set cursorline
-highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=lightgray
-
 set mouse=a
 
 set backspace=start,eol,indent
@@ -200,6 +197,8 @@ nnoremap <C-p> gT
 
 nmap <C-k> <Plug>(caw:hatpos:toggle)
 vmap <C-k> <Plug>(caw:hatpos:toggle)
+
+nnoremap <C-]> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 
 au BufNewFile,BufRead *.coffee setf coffee
 au BufNewFile,BufRead *.md     setf markdown
@@ -225,8 +224,8 @@ au FileType python   setl tw=0 sw=4 tabstop=8 expandtab
 au FileType eruby      inoremap <silent> <% <%<space><space>%><left><left><left>
 
 " move cursor as is
-nnoremap j gj
-nnoremap k gk
+" nnoremap j gj
+" nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
 
