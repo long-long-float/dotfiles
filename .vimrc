@@ -37,6 +37,7 @@ call dein#add('tyru/open-browser.vim')
 call dein#add('tyru/caw.vim')
 call dein#add('Shougo/vinarise')
 call dein#add('editorconfig/editorconfig-vim')
+call dein#add('rhysd/vim-clang-format')
 
 " Unite
 call dein#add('Shougo/unite.vim')
