@@ -39,6 +39,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/vinarise')
   call dein#add('editorconfig/editorconfig-vim')
   call dein#add('rhysd/vim-clang-format')
+  call dein#add('itchyny/vim-cursorword')
 
   " Unite
   call dein#add('Shougo/unite.vim')
