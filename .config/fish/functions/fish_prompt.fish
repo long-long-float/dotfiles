@@ -90,7 +90,13 @@ function prompt_user -d "Display actual user if different from $default_user"
 end
 
 function prompt_dir -d "Display the actual directory"
-  prompt_segment blue white "📂 "(my_pwd)
+  if [ "$SSH_CLIENT" ]
+    set color green
+  else
+    set color blue
+  end
+
+  prompt_segment $color white "📂 "(my_pwd)
 end
 
 function prompt_git -d "Display the actual git state"
