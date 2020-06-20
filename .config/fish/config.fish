@@ -80,6 +80,8 @@ alias dc="cd"
 alias ls="ls -h --color=always"
 alias pry="pry -r json -r yaml -r bigdecimal"
 alias gdb="cgdb"
+alias open="xdg-open"
+alias diff="diff --color=always"
 
 # functions
 

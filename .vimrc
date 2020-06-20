@@ -178,6 +178,8 @@ set nowrap
 
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 
 set mouse=a
 
@@ -207,7 +209,7 @@ nnoremap <C-]> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 
 au BufNewFile,BufRead *.coffee setf coffee
 au BufNewFile,BufRead *.md     setf markdown
-au BufNewFile,BufRead *.md,*.re set wrap
+au BufNewFile,BufRead *.md,*.re,*.tex set wrap
 au BufNewFile,BufRead *.sjs,*pegjs setf javascript
 au BufNewFile,BufRead *.som    setf st
 au BufNewFile,BufRead *.vue    setf javascript
