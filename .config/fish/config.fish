@@ -1,19 +1,6 @@
 set os (uname)
 if [ $os = "Linux" ]
-  # For linuxbrew
-  set PATH     $HOME/.linuxbrew/bin        $PATH
-  set MANPATH  $HOME/.linuxbrew/share/man:
-  set INFOPATH $HOME/.linuxbrew/share/info $INFOPATH
-  set -x LD_LIBRARY_PATH $HOME/.linuxbrew/lib $LD_LIBRARY_PATH
-
   set PATH $HOME/.local/share/umake/ide/visual-studio-code $PATH
-
-  # For Android Studio
-  if [ -e $HOME/Android ]
-    set ANDROID_HOME $HOME/Android/Sdk
-    set PATH $ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools $PATH
-    set PATH $HOME/local/android-studio/gradle/gradle-3.2/bin $PATH
-  end
 
   # key repeat configure
   if [ "$DISPLAY"  ]
@@ -37,13 +24,7 @@ end
 if [ -e $HOME/.rbenv ]
   set PATH $HOME/.rbenv/bin $HOME/.rbenv/shims $PATH
   set PATH $HOME/.rbenv/plugins/ruby-build/bin $PATH
-  . (rbenv init - | psub)
-end
-
-# For crenv
-if [ -e $HOME/.crenv ]
-  set PATH $HOME/.crenv/bin $PATH
-  . (crenv init - | psub)
+  source (rbenv init - | psub)
 end
 
 # For nodebrew
@@ -52,11 +33,8 @@ if [ -e $HOME/.nodebrew ]
   set PATH $HOME/.nodebrew/current/bin $NODE_PATH $PATH
 end
 
-# For perlbrew
-[ -e $HOME/perl5/perlbrew ] ; and set PATH $HOME/perl5/perlbrew/bin $PATH
-
 # For go-lang
-set -x GOROOT $HOME/.local/share/umake/go/go-lang
+# set -x GOROOT $HOME/.local/share/umake/go/go-lang
 set -x GOPATH $HOME/.go
 
 # For rustup
@@ -70,10 +48,8 @@ end
 set -x LESS '-iMR'
 
 # aliases
-alias be="bundle exec"
 alias ccat="pygmentize -g"
 alias ccp="xclip -i -selection clipboard"
-alias g++11="g++ -std=c++11"
 alias tmux="tmux -2" # run as 256 mode
 alias memcheck="valgrind --tool=memcheck --leak-check=yes"
 alias dc="cd"
@@ -83,16 +59,3 @@ alias gdb="cgdb"
 alias open="xdg-open"
 alias diff="diff --color=always"
 
-# functions
-
-function nofi
-  if [ $status -eq 0 ]
-    notify-send "successfully finished"
-  else
-    notify-send "failed!"
-  end
-end
-
-function google
-  firefox "http://google.co.jp/search?q=$argv"
-end
