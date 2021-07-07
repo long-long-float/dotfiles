@@ -17,22 +17,12 @@ if dein#load_state('~/.cache/dein')
   " Let dein manage dein
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-  " neo**
-  " call dein#add('Shougo/neocomplete.vim')
-  " call dein#add('Shougo/neosnippet')
-  " call dein#add('Shougo/neosnippet-snippets')
-  " call dein#add('Shougo/neomru.vim')
-  " call dein#add('Shougo/neoyank.vim')
-
   " editing
   call dein#add('cohama/lexima.vim')
   call dein#add('tpope/vim-endwise')
   call dein#add('vim-scripts/Align')
-  call dein#add('tpope/vim-rails')
   call dein#add('stevemadere/ruby-matchit')
   call dein#add('tpope/vim-surround')
-  " call dein#add('marcus/rsense')
-  " call dein#add('thinca/vim-ref')
   call dein#add('kannokanno/previm')
   call dein#add('tyru/open-browser.vim')
   call dein#add('tyru/caw.vim')
@@ -44,11 +34,9 @@ if dein#load_state('~/.cache/dein')
   " Unite
   call dein#add('Shougo/unite.vim')
   call dein#add('tsukkee/unite-tag')
-  call dein#add('basyura/unite-rails')
 
   " display
   call dein#add('airblade/vim-gitgutter')
-  call dein#add('powerline/powerline', {'rtp': 'powerline/bindings/vim/'})
   call dein#add('Yggdroot/indentLine')
 
   " themes
@@ -58,20 +46,15 @@ if dein#load_state('~/.cache/dein')
   call dein#add('altercation/vim-colors-solarized')
 
   " languages
-  call dein#add('kchmck/vim-coffee-script')
-  call dein#add('sudar/vim-arduino-syntax')
   call dein#add('derekwyatt/vim-scala')
-  call dein#add('vim-scripts/st.vim')
   call dein#add('elzr/vim-json')
   call dein#add('othree/html5.vim')
-  call dein#add('sophacles/vim-processing')
   call dein#add('godlygeek/tabular') " tabular must come before vim-markdown
   call dein#add('plasticboy/vim-markdown')
   call dein#add('ekalinin/Dockerfile.vim')
   call dein#add('dag/vim-fish')
   call dein#add('leafgarland/typescript-vim')
   call dein#add('clausreinke/typescript-tools.vim')
-  call dein#add('slim-template/vim-slim')
   call dein#add('fatih/vim-go')
   call dein#add('othree/yajs.vim')
   call dein#add('rust-lang/rust.vim')
@@ -97,44 +80,6 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
-"
-" Powerline
-"
-set guifont=Inconsolata\ for\ Powerline:h15
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
-set termencoding=utf-8
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-set laststatus=2
-
-"
-" Rsense
-"
-" let g:rsenseUseOmniFunc = 1
-
-"
-" neocomplete.vim
-"
-" let g:acp_enableAtStartup = 0
-" let g:neocomplete#enable_at_startup = 1
-" let g:neocomplete#enable_smart_case = 1
-" if !exists('g:neocomplete#force_omni_input_patterns')
-"   let g:neocomplete#force_omni_input_patterns = {}
-" endif
-" let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
-
-"
-" neosnippet
-"
-" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" xmap <C-k>     <Plug>(neosnippet_expand_target)
-" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-"       \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 "
 " vim-json
