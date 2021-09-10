@@ -50,7 +50,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('elzr/vim-json')
   call dein#add('othree/html5.vim')
   call dein#add('godlygeek/tabular') " tabular must come before vim-markdown
-  call dein#add('plasticboy/vim-markdown')
   call dein#add('ekalinin/Dockerfile.vim')
   call dein#add('dag/vim-fish')
   call dein#add('leafgarland/typescript-vim')
@@ -85,10 +84,6 @@ endif
 " vim-json
 "
 let g:vim_json_syntax_conceal = 0
-
-" makrdown
-let g:vim_markdown_folding_disabled=1
-let g:vim_markdown_conceal = 0
 
 let g:quickrun_config = {
   \ "_": {
