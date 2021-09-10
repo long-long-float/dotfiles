@@ -133,6 +133,8 @@ set wildmode=longest,full
 
 noremap ; :
 
+autocmd ColorScheme * hi Search ctermbg=159
+
 let g:tex_conceal=''
 
 " key maps
@@ -156,6 +158,7 @@ au BufNewFile,BufRead *.som    setf st
 au BufNewFile,BufRead *.vue    setf javascript
 au BufNewFile,BufRead *.nas    setf nasm
 au BufNewFile,BufRead *.re     setf review
+au BufNewFile,BufRead jenkinsfile     setf groovy
 
 au BufNewFile *.html 0r $HOME/.vim/templates/.html
 
