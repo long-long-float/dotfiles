@@ -17,6 +17,7 @@ DOT_FILES=(
   #fish
   .config/fish/config.fish .config/fish/functions/fish_prompt.fish
   .config/fish/functions/my_pwd.fish
+  .zshrc
   )
 
 [ ! -d ~/.config/fish/functions ] && mkdir -p $HOME/.config/fish/functions
